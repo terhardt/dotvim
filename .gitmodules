@@ -1,0 +1,56 @@
+[submodule "vim-markdown"]
+	path = bundle/vim-markdown
+    url = http://github.com/plasticboy/vim-markdown/
+    ignore = dirty
+[submodule "LaTeX-Box"]
+	path = bundle/LaTeX-Box
+    url = http://github.com/vim-scripts/LaTeX-Box
+    ignore = dirty
+[submodule "pathogen.vim"]
+	path = bundle/pathogen.vim
+    url = http://github.com/vim-scripts/pathogen.vim
+    ignore = dirty
+[submodule "vim-pathogen"]
+	path = bundle/vim-pathogen
+    url = https://github.com/tpope/vim-pathogen
+    ignore = dirty
+[submodule "The-NERD-tree"]
+	path = bundle/The-NERD-tree
+    url = http://github.com/vim-scripts/The-NERD-tree
+    ignore = dirty
+[submodule "supertab"]
+	path = bundle/supertab
+    url = http://github.com/ervandew/supertab
+    ignore = dirty
+[submodule "UltiSnips"]
+	path = bundle/UltiSnips
+    url = http://github.com/vim-scripts/UltiSnips
+    ignore = dirty
+[submodule "tcomment_vim"]
+	path = bundle/tcomment_vim
+    url = http://github.com/tomtom/tcomment_vim
+    ignore = dirty
+[submodule "vim-colors-solarized"]
+	path = bundle/vim-colors-solarized
+    url = http://github.com/altercation/vim-colors-solarized
+    ignore = dirty
+[submodule "fugitive.vim"]
+	path = bundle/fugitive.vim
+    url = http://github.com/vim-scripts/fugitive.vim
+    ignore = dirty
+[submodule "vim-fugitive"]
+	path = bundle/vim-fugitive
+    url = https://github.com/tpope/vim-fugitive
+    ignore = dirty
+[submodule "vim-powerline"]
+	path = bundle/vim-powerline
+    url = https://github.com/Lokaltog/vim-powerline/
+    ignore = dirty
+[submodule "vim-surround"]
+	path = bundle/vim-surround
+    url = http://github.com/tpope/vim-surround
+    ignore = dirty
+[submodule "delimitMate"]
+	path = bundle/delimitMate
+    url = https://github.com/Raimondi/delimitMate.git
+    ignore = dirty
