@@ -1,7 +1,9 @@
 " vim config
 " pathogen
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()          "load bundles 
 call pathogen#helptags()        " load plugin help files
+filetype plugin indent on
 
 "invisible characters
 nmap <leader>l :set list!<CR>   " Shortcut to rapidly toggle `set list`
