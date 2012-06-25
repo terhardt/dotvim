@@ -1,0 +1,45 @@
+[submodule "bundle/gist"]
+	path = bundle/gist
+	url = http://github.com/vim-scripts/Gist.vim/
+[submodule "bundle/fugitive"]
+	path = bundle/fugitive
+	url = https://github.com/tpope/vim-fugitive/
+[submodule "bundle/vim-solarized"]
+	path = bundle/vim-solarized
+	url = http://github.com/altercation/vim-colors-solarized/
+[submodule "bundle/tabular"]
+	path = bundle/tabular
+	url = https://github.com/godlygeek/tabular/
+[submodule "bundle/delimitMate"]
+	path = bundle/delimitMate
+	url = https://github.com/vim-scripts/delimitMate.vim/
+[submodule "bundle/vim-surround"]
+	path = bundle/vim-surround
+	url = http://github.com/tpope/vim-surround/
+[submodule "bundle/Latex-Box"]
+	path = bundle/Latex-Box
+	url = git://github.com/vim-scripts/LaTeX-Box.git
+[submodule "bundle/tcomment_vim"]
+	path = bundle/tcomment_vim
+	url = http://github.com/tomtom/tcomment_vim/
+[submodule "bundle/vim-git"]
+	path = bundle/vim-git
+	url = https://github.com/tpope/vim-git/
+[submodule "bundle/The-NERD-tree"]
+	path = bundle/The-NERD-tree
+	url = git://github.com/vim-scripts/The-NERD-tree.git
+[submodule "bundle/vim-markdown"]
+	path = bundle/vim-markdown
+	url = git://github.com/plasticboy/vim-markdown.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = http://github.com/ervandew/supertab/
+[submodule "bundle/vim-powerline"]
+	path = bundle/vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline/
+[submodule "bundle/UltiSnips"]
+	path = bundle/UltiSnips
+	url = http://github.com/vim-scripts/UltiSnips/
+[submodule "bundle/pathogen"]
+	path = bundle/pathogen
+	url = git://github.com/vim-scripts/pathogen.vim.git
