@@ -6,7 +6,7 @@ import subprocess as sp
 bundles = {
         'vim-markdown'  : 'git://github.com/plasticboy/vim-markdown.git',
         'Latex-Box'     : 'git://github.com/vim-scripts/LaTeX-Box.git',
-        'pathogen'      : 'git://github.com/vim-scripts/pathogen.vim.git',
+        'vim-pathogen'      : 'git://github.com/tpope/vim-pathogen.git',
         'The-NERD-tree' : 'git://github.com/vim-scripts/The-NERD-tree.git',
         'supertab'      : 'http://github.com/ervandew/supertab/',
         'UltiSnips'     : 'http://github.com/vim-scripts/UltiSnips/',
