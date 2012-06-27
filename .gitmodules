@@ -58,3 +58,7 @@
 	path = bundle/supertab
 	url = http://github.com/ervandew/supertab/
     ignore = dirty
+[submodule "bundle/taskpaper"]
+	path = bundle/taskpaper
+    url = https://github.com/davidoc/taskpaper.vim
+    ignore = dirty
