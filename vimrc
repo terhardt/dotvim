@@ -86,6 +86,7 @@ let g:Powerline_symbols = 'unicode'
 
 " Latex-Box
 let g:LatexBox_viewer = 'skim'
+let g:tex_flavor = 'latex'
 
 " indentation formats as in TextMate
 nmap <D-[> <<
