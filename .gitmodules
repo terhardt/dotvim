@@ -62,3 +62,7 @@
 	path = bundle/taskpaper
     url = https://github.com/davidoc/taskpaper.vim
     ignore = dirty
+[submodule "bundle/numbers.vim"]
+	path = bundle/numbers.vim
+    url = https://github.com/myusuf3/numbers.vim.git
+    ignore = dirty
