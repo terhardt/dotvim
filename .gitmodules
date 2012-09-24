@@ -66,3 +66,7 @@
 	path = bundle/vim-multimarkdown
 	url = https://github.com/jngeist/vim-multimarkdown
     ignore = dirty
+[submodule "bundle/numbers.vim"]
+	path = bundle/numbers.vim
+    url = https://github.com/myusuf3/numbers.vim.git
+    ignore = dirty
