@@ -62,3 +62,7 @@
 	path = bundle/taskpaper
     url = https://github.com/davidoc/taskpaper.vim
     ignore = dirty
+[submodule "bundle/vim-multimarkdown"]
+	path = bundle/vim-multimarkdown
+	url = https://github.com/jngeist/vim-multimarkdown
+    ignore = dirty
