@@ -113,4 +113,5 @@ set spelllang=en_us
 " Autocommand options
 if has("autocmd")
     autocmd bufwritepost .vimrc source $MYVIMRC " auto source .vimrc on save
+    autocmd FileType python set foldmethod=indent
 endif
