@@ -74,3 +74,6 @@
 	path = bundle/votl
     url = git://github.com/insanum/votl.git
     ignore = dirty
+[submodule "bundle/vimoutliner"]
+	path = bundle/vimoutliner
+	url = git://github.com/vimoutliner/vimoutliner.git
