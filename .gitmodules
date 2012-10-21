@@ -76,4 +76,9 @@
     ignore = dirty
 [submodule "bundle/vimoutliner"]
 	path = bundle/vimoutliner
-	url = git://github.com/vimoutliner/vimoutliner.git
+    url = git://github.com/vimoutliner/vimoutliner.git
+    ingore = dirty
+[submodule "bundle/jedi-vim"]
+	path = bundle/jedi-vim
+    url = git://github.com/davidhalter/jedi-vim.git
+    igore = dirty
