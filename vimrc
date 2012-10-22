@@ -61,7 +61,8 @@ syntax on                       " enable syntax highlighting
 colorscheme solarized           " set to solarized
 set background=dark             " dark background as default
 call togglebg#map("<S-F5>")     " switch between dark / light on <S-F5>
-
+" jedi-vim
+let g:jedi#popup_on_dot = 0  " do not start autocompletion on .
 
 " Cleanup trailing whitespace
 nmap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
