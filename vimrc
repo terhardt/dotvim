@@ -34,7 +34,7 @@ set colorcolumn=79             " highlight 79 th column
 set formatoptions=tcq          " formatoptions for textwrap
 set showcmd                    " show command in status line
 :au FocusLost * silent! wa     " save if focus is lost
-" Searching
+" Searching uses the python regex syntax
 nnoremap / /\v
 vnoremap / /\v
 " turn of vims regex engine for searches
@@ -89,18 +89,17 @@ let g:Powerline_symbols = 'unicode'
 let g:LatexBox_viewer = 'skim'
 let g:tex_flavor = 'latex'
 
-" indentation formats as in TextMate
-nmap <D-[> <<
-nmap <D-]> >>
-vmap <D-[> <gv
-vmap <D-]> >gv
-
+" indentation reselect block after indent command
+vnoremap < <gv
+vnoremap > >gv
 " split pane navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
-
+" move between tabs
+map <leader>m <esc>:tabnext<CR>
+map <leader>n <esc>:tabprevious<CR>
 " GUI Options
 if has('gui_running')
     set guioptions=aAce         " disable tool bar in macvim
