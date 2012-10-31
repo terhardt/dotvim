@@ -23,8 +23,8 @@
 	url = http://github.com/tpope/vim-surround/
     ignore = dirty
 [submodule "bundle/Latex-Box"]
-	path = bundle/Latex-Box
-	url = git://github.com/vim-scripts/LaTeX-Box.git
+    path = bundle/Latex-Box
+    url = git://github.com/LaTeX-Box-Team/LaTeX-Box.git
     ignore = dirty
 [submodule "bundle/tcomment_vim"]
 	path = bundle/tcomment_vim
