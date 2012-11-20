@@ -86,3 +86,7 @@
 	path = bundle/Latex-Box
     url = git://github.com/LaTeX-Box-Team/LaTeX-Box.git
     ignore = dirty
+[submodule "bundle/vim-markdown-folding"]
+	path = bundle/vim-markdown-folding
+    url = git://github.com/nelstrom/vim-markdown-folding.git
+    ignore = dirty
