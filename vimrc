@@ -152,6 +152,7 @@ let g:tex_flavor="latex"
 let g:LatexBox_viewer="skim"
 let g:LatexBox_quickfix=1
 let g:LatexBox_show_warnings=0
+let g:LatexBox_ignore_warnings=['Underfull', 'Overfull', 'specifier changed to', 'Font Shape']
 let g:LatexBox_Folding=1
 " }}}
 "
