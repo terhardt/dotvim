@@ -167,6 +167,7 @@ let g:pymode_syntax_builtin_objs=0
 let g:pymode_syntax_builtin_funcs=0
 let g:pymode_folding=1
 let g:pymode_rope=0
+let g:pymode_lint_ignore = "E501,E221"
 " }}}
 " }}}
 
