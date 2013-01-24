@@ -90,3 +90,7 @@
 	path = bundle/jinja
 	url = git://github.com/vim-scripts/Jinja.git
     ignore = dirty
+[submodule "bundle/taglist"]
+	path = bundle/taglist
+	url = git://github.com/vim-scripts/taglist.vim.git
+    ignore = dirty
