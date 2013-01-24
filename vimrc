@@ -138,6 +138,7 @@ inoremap <F2> <esc>:NERDTreeToggle %:p:h <CR>
 " 
 " SuperTab {{{
 let g:SuperTabDefaultCompletionType="context" " use context tab completion
+let g:SuperTabContextDefaultCompletionType="<c-x><c-o>" " use omni competion
 let g:SuperTabMappingTabLiteral="<c-tab>"
 " }}}
 "
@@ -169,6 +170,9 @@ let g:pymode_folding=1
 let g:pymode_rope=0
 let g:pymode_lint_ignore = "E501,E221"
 " }}}
+" taglist {{{
+let tlist_tex_settings = 'latex;l:labels;s:sections;t:subsections;u:subsubsections'
+" }}}
 " }}}
 
 " GUI Options {{{
@@ -179,7 +183,8 @@ endif
 " }}}
 
 " Autocommands {{{
-if has("autocmd")
-    autocmd bufwritepost .vimrc source $MYVIMRC " auto source .vimrc on save
-endif
+" auto source .vimrc on save
+autocmd bufwritepost .vimrc source $MYVIMRC 
+" Set keywords to work with latex labels
+autocmd FileType tex set iskeyword=@,48-57,_,-,:,192-255
 " }}}
