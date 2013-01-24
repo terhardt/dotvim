@@ -110,9 +110,9 @@ vnoremap < <gv
 vnoremap > >gv
 " split pane navigation
 map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+map <c-j> <C-w>j
+map <c-k> <C-w>k
+map <c-l> <C-w>l
 " move between tabs
 map <leader>m <esc>:tabnext<CR>
 map <leader>n <esc>:tabprevious<CR>
@@ -129,6 +129,10 @@ vnoremap <space> za
 " 
 " Ultisnips{{{
 let g:UltiSnipsUsePythonVersion = 2
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsListSnippets="<c-tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 " }}}
 " 
 " NERDTree {{{
@@ -150,7 +154,7 @@ let g:Powerline_symbols="compatible"
 "
 " Latex-Box {{{
 let g:tex_flavor="latex"
-let g:LatexBox_viewer="skim"
+let g:LatexBox_viewer="Skim"
 let g:LatexBox_quickfix=1
 let g:LatexBox_show_warnings=0
 let g:LatexBox_ignore_warnings=['Underfull', 'Overfull', 'specifier changed to', 'Font Shape']
@@ -171,14 +175,14 @@ let g:pymode_rope=0
 let g:pymode_lint_ignore = "E501,E221"
 " }}}
 " taglist {{{
-let tlist_tex_settings = 'latex;l:labels;s:sections;t:subsections;u:subsubsections'
+" let tlist_tex_settings = 'latex;l:labels;s:sections;t:subsections;u:subsubsections'
 " }}}
 " }}}
 
 " GUI Options {{{
 if has('gui_running')
     set guioptions=aAce         " disable tool bar in macvim
-    set guifont=Inconsolata:h11 " set guifont to Inconsolata 11
+    set guifont=Inconsolata:h12 " set guifont to Inconsolata 11
 endif
 " }}}
 
@@ -186,5 +190,5 @@ endif
 " auto source .vimrc on save
 autocmd bufwritepost .vimrc source $MYVIMRC 
 " Set keywords to work with latex labels
-autocmd FileType tex set iskeyword=@,48-57,_,-,:,192-255
-" }}}
+" autocmd FileType tex set iskeyword=@,48-57,_,-,:,192-255
+" }}} 
