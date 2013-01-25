@@ -174,15 +174,36 @@ let g:pymode_folding=1
 let g:pymode_rope=0
 let g:pymode_lint_ignore = "E501,E221"
 " }}}
-" taglist {{{
-" let tlist_tex_settings = 'latex;l:labels;s:sections;t:subsections;u:subsubsections'
+"
+" tagbar {{{
+let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
+let g:tagbar_width = 40
+let g:tagbar_compact = 1
+let g:tagbar_iconchars = ['▸', '▾']
+noremap <silent> <F4> :TagbarToggle<CR> 
+" languange definitions for tagbar {{{
+" LaTeX : {{{
+let g:tagbar_type_tex = {
+            \ 'ctagstype' : 'latex',
+            \ 'kinds'     : [
+                \ 's:sections',
+                \ 'g:graphics:0:0',
+                \ 'l:labels',
+                \ 'r:refs:1:0',
+                \ 'p:pagerefs:1:0'
+            \ ],
+            \ 'sort'    : 0,
+        \ }
+"}}}
+"
+" }}}
 " }}}
 " }}}
 
 " GUI Options {{{
 if has('gui_running')
     set guioptions=aAce         " disable tool bar in macvim
-    set guifont=Inconsolata:h12 " set guifont to Inconsolata 11
+    set guifont=Inconsolata:h13 " set guifont to Inconsolata 11
 endif
 " }}}
 
