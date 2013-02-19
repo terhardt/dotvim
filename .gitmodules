@@ -74,8 +74,8 @@
 	path = bundle/python-mode
     url = git://github.com/klen/python-mode.git
     ignore = dirty
-[submodule "bundle/Latex-Box"]
-	path = bundle/Latex-Box
+[submodule "bundle/LaTeX-Box"]
+	path = bundle/LaTeX-Box
     url = git://github.com/LaTeX-Box-Team/LaTeX-Box.git
     ignore = dirty
 [submodule "bundle/vim-markdown-folding"]
