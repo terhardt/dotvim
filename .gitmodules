@@ -2,12 +2,12 @@
 	path = bundle/gist
     url = http://github.com/vim-scripts/Gist.vim/
     ignore = dirty
-[submodule "bundle/fugitive"]
-	path = bundle/fugitive
+[submodule "bundle/vim-fugitive"]
+	path = bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive/
     ignore = dirty
-[submodule "bundle/vim-solarized"]
-	path = bundle/vim-solarized
+[submodule "bundle/vim-colors-solarized"]
+	path = bundle/vim-colors-solarized
 	url = http://github.com/altercation/vim-colors-solarized/
     ignore = dirty
 [submodule "bundle/tabular"]
