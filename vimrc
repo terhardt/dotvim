@@ -162,17 +162,25 @@ let g:LatexBox_Folding=1
 " }}}
 "
 " crtlp {{{
-let g:ctrlp_max_height = 30
+let g:ctrlp_max_height = 20
 let g:ctrlp_dont_split = 'NERD_tree_2'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+let g:crtlp_mruf_relative = 1
 " }}}
 "
 " python-mode {{{
 let g:pymode_syntax=1
-let g:pymode_syntax_builtin_objs=0
-let g:pymode_syntax_builtin_funcs=0
+let g:pymode_syntax_builtin_objs=1
+let g:pymode_syntax_builtin_funcs=1
 let g:pymode_folding=1
-let g:pymode_rope=0
+let g:pymode_rope=1
+let g:pymode_rope_vim_completion=1
 let g:pymode_lint_ignore = "E501,E221"
+" }}}
+"
+" jedi {{{
+" Seems to be all good
 " }}}
 "
 " tagbar {{{
