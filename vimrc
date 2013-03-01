@@ -174,8 +174,10 @@ let g:pymode_syntax=1
 let g:pymode_syntax_builtin_objs=1
 let g:pymode_syntax_builtin_funcs=1
 let g:pymode_folding=1
-let g:pymode_rope=1
+let g:pymode_rope=0
 let g:pymode_rope_vim_completion=1
+let g:pymode_rope_extended_complete=0
+let g:pymode_auto_project=0
 let g:pymode_lint_ignore = "E501,E221"
 " }}}
 "
