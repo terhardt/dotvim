@@ -10,10 +10,6 @@
 	path = bundle/tabular
 	url = https://github.com/godlygeek/tabular/
     ignore = dirty
-[submodule "bundle/delimitMate"]
-	path = bundle/delimitMate
-	url = https://github.com/vim-scripts/delimitMate.vim/
-    ignore = dirty
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = http://github.com/tpope/vim-surround/
