@@ -182,7 +182,9 @@ let g:pymode_lint_ignore = "E501,E221"
 " }}}
 "
 " jedi {{{
-" Seems to be all good
+let g:jedi#popup_on_dot = 0
+let g:jedi#popup_select_first = 1
+let g:jedi#show_function_definition = "0"
 " }}}
 "
 " tagbar {{{
