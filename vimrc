@@ -213,9 +213,12 @@ let g:tagbar_type_tex = {
 " }}}
 
 " GUI Options {{{
+" These Options are only run, when the gui is active
+" the clipboard option is only working in windows Gvim or MacVim
 if has('gui_running')
     set guioptions=aAce         " disable tool bar in macvim
     set guifont=Inconsolata:h13 " set guifont to Inconsolata 11
+    set clipboard=unnamed       " hook up vim clipboad to system clipboad
 endif
 " }}}
 
