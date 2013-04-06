@@ -1,13 +1,13 @@
 " Vim configuration
-" Tobias Erhardt 2012-11-24
+" Tobias Erhardt 2013-04-06
 
 " Preamble ---------------------------------------------------------------{{{
 " Load Pathogen and set noncompatible option
 
 filetype off
 runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()          
-call pathogen#helptags()        
+call pathogen#infect()
+call pathogen#helptags()
 filetype plugin indent on
 set nocompatible " be improved
 
@@ -15,20 +15,40 @@ set nocompatible " be improved
 
 " Basics -----------------------------------------------------------------{{{
 " Basic Options
-set encoding=utf-8                  " utf-8 as default
-set ruler  " enable ruler
+set encoding=utf-8             " utf-8 as default
+set ruler                      " enable ruler
 set cursorline                 " highlight current line
 set number                     " display line numbers
 set backspace=indent,eol,start " backspace over everything
-set autoindent " enable auto indentation
+set autoindent                 " enable auto indentation
 set smartindent                " automatic indentation
 set showcmd                    " show command in status line
 set autoread                   " auto reload changed files
 set autowriteall               " auto write on buffer change
-:au FocusLost * silent! wa     " save if focus is lost
-set listchars=tab:▸\ ,eol:¬
-set visualbell
+set listchars=tab:▸\ ,eol:¬    " characters for invisibles
+set visualbell                 " don't beep
+set noerrorbells               " don't beep
 set modeline
+set title                      " set terminals title
+
+
+" vimrc editing ----------------------------------------------------------{{{
+" quickly edit the vimrc file
+nmap <silent> <leader>ve :e $MYVIMRC<CR>
+" quickly source the vimrc file
+nmap <silent> <leader>vs :so $MYVIMRC<CR>
+" }}}
+
+" movement ---------------------------------------------------------------{{{
+" If I'm using vim than the right way
+inoremap <up> <nop>
+inoremap<down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+" make up and down behave nicely.
+nnoremap j gj
+nnoremap k gk
+" }}}
 
 " Tabs, spaces, wrapping {{{
 set tabstop=4          " width of whitespace by tab
@@ -66,10 +86,16 @@ let maplocalleader="\\"
 " }}}
 
 " Color scheme {{{
-syntax on                       " enable syntax highlighting
-colorscheme solarized           " set to solarized
-set background=dark             " dark background as default
-call togglebg#map("<S-F5>")     " switch between dark / light on <S-F5>
+" If the terminal has enough colours set color scheme
+if &t_Co >= 256 || has("gui_running")
+    colorscheme solarized           " set to solarized
+    set background=dark             " dark background as default
+    call togglebg#map("<S-F5>")     " switch between dark / light on <S-F5>
+endif
+" If the terminal has any colors enamble syntax highlighting
+if &t_Co > 2 || has("gui_running")
+    syntax on                       " enable syntax highlighting
+endif
 " Highlight VCS conflict markers
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 " }}}
@@ -79,12 +105,12 @@ match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 nnoremap / /\v
 vnoremap / /\v
 " turn of vims regex engine for searches
-set ignorecase                    " ignore case for all lowercase search
-set smartcase                     " case sensitive for upper-case search
-set gdefault                      " default to global substitution
-set incsearch                     " incremental search
-set showmatch                     " show matches
-set hlsearch                      " highlight results
+set ignorecase                " ignore case for all lowercase search
+set smartcase                 " case sensitive for upper-case search
+set gdefault                  " default to global substitution
+set incsearch                 " incremental search
+set showmatch                 " show matches
+set hlsearch                  " highlight results
 nmap <leader><space> :noh<cr> " clear search string
 " }}}
 
@@ -92,7 +118,7 @@ nmap <leader><space> :noh<cr> " clear search string
 
 " Bindings {{{
 " toggle invisible characters
-nmap <silent><leader>i :set list!<CR>  
+nmap <silent><leader>i :set list!<CR>
 " text wrapping
 nmap <silent><leader>w :set wrap<CR>
 " Reformating
@@ -103,8 +129,6 @@ set spelllang=en_us
 nmap <silent><leader>s :set spell!<CR>
 " Cleanup trailing whitespace
 nmap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
-" Open iTerm at the current files path
-nmap <silent><leader>T :!open %:p:h -a iTerm.app <CR> <CR>
 " indentation reselect block after indent command
 vnoremap < <gv
 vnoremap > >gv
@@ -126,7 +150,7 @@ vnoremap <space> za
 " }}}
 
 " Plugins ----------------------------------------------------------------{{{
-" 
+"
 " Ultisnips{{{
 let g:UltiSnipsUsePythonVersion = 2
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -134,12 +158,12 @@ let g:UltiSnipsListSnippets="<c-tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 " }}}
-" 
+"
 " NERDTree {{{
 noremap <F2> :NERDTreeToggle %:p:h <CR>
-inoremap <F2> <esc>:NERDTreeToggle %:p:h <CR>  
+inoremap <F2> <esc>:NERDTreeToggle %:p:h <CR>
 " }}}
-" 
+"
 " SuperTab {{{
 let g:SuperTabDefaultCompletionType="context" " use context tab completion
 let g:SuperTabContextDefaultCompletionType="<c-x><c-o>" " use omni competion
@@ -148,7 +172,7 @@ let g:SuperTabMappingTabLiteral="<c-tab>"
 "
 " PowerLine {{{
 set laststatus=2
-set t_Co=256
+" set t_Co=256
 let g:Powerline_symbols="compatible"
 " }}}
 "
@@ -192,7 +216,7 @@ let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
 let g:tagbar_width = 20
 let g:tagbar_compact = 0
 let g:tagbar_iconchars = ['▸', '▾']
-noremap <silent> <F4> :TagbarToggle<CR> 
+noremap <silent> <F4> :TagbarToggle<CR>
 " languange definitions for tagbar {{{
 " LaTeX : {{{
 let g:tagbar_type_tex = {
@@ -223,8 +247,6 @@ endif
 " }}}
 
 " Autocommands {{{
-" auto source .vimrc on save
-autocmd bufwritepost .vimrc source $MYVIMRC 
-" Set keywords to work with latex labels
-" autocmd FileType tex set iskeyword=@,48-57,_,-,:,192-255
-" }}} 
+" save if focus is lost
+autocmd FocusLost * silent! wa     
+" }}}
