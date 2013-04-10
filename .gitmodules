@@ -90,3 +90,7 @@
 	path = bundle/jedi-vim
 	url = git://github.com/davidhalter/jedi-vim.git
     ignore = dirty
+[submodule "bundle/zencoding-vim"]
+	path = bundle/zencoding-vim
+	url = git://github.com/mattn/zencoding-vim.git
+    ignore = dirty
