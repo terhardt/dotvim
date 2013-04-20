@@ -194,6 +194,7 @@ let g:crtlp_mruf_relative = 1
 " }}}
 "
 " python-mode {{{
+let g:pymode_lint=0
 let g:pymode_syntax=1
 let g:pymode_syntax_builtin_objs=1
 let g:pymode_syntax_builtin_funcs=1
@@ -205,6 +206,9 @@ let g:pymode_auto_project=0
 let g:pymode_lint_ignore = "E501,E221"
 " }}}
 "
+"syntastic {{{
+let g:syntastic_python_checkers=["flake8"]
+"}}}
 " jedi {{{
 let g:jedi#popup_on_dot = 0
 let g:jedi#popup_select_first = 1
