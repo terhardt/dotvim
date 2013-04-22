@@ -217,7 +217,7 @@ let g:jedi#popup_select_first = 1
 let g:jedi#show_function_definition = "0"
 " }}}
 "
-" tagbar {{{
+" tagbar {{
 let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
 let g:tagbar_width = 20
 let g:tagbar_compact = 0
@@ -238,6 +238,19 @@ let g:tagbar_type_tex = {
         \ }
 "}}}
 "
+" vimux {{{
+" Prompt for a command to run
+map rp :PromptVimTmuxCommand
+" Run last command executed by RunVimTmuxCommand
+map rl :RunLastVimTmuxCommand
+" Inspect runner pane
+map ri :InspectVimTmuxRunner
+" Close all other tmux panes in current window
+map rx :CloseVimTmuxPanes
+" Interrupt any command running in the runner pane
+map rs :InterruptVimTmuxRunner
+" Height of tmux pane
+let g:VimuxHeight ="40"
 " }}}
 " }}}
 " }}}
