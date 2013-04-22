@@ -208,7 +208,9 @@ let g:pymode_lint_ignore = "E501,E221"
 "
 "syntastic {{{
 let g:syntastic_python_checkers=["flake8"]
+" let g:syntastic_python_flake8_post_args='-d W0142' 
 "}}}
+
 " jedi {{{
 let g:jedi#popup_on_dot = 0
 let g:jedi#popup_select_first = 1
