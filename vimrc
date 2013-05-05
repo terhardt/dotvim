@@ -10,7 +10,6 @@ call pathogen#infect()
 call pathogen#helptags()
 filetype plugin indent on
 set nocompatible " be improved
-
 " }}}
 
 " Basics -----------------------------------------------------------------{{{
@@ -237,21 +236,21 @@ let g:tagbar_type_tex = {
             \ 'sort'    : 0,
         \ }
 "}}}
+" }}}
 "
 " vimux {{{
 " Prompt for a command to run
-map rp :PromptVimTmuxCommand
+map <leader>rp :PromptVimTmuxCommand
 " Run last command executed by RunVimTmuxCommand
-map rl :RunLastVimTmuxCommand
+map <leader>rl :RunLastVimTmuxCommand
 " Inspect runner pane
-map ri :InspectVimTmuxRunner
+map <leader>ri :InspectVimTmuxRunner
 " Close all other tmux panes in current window
-map rx :CloseVimTmuxPanes
+map <leader>rx :CloseVimTmuxPanes
 " Interrupt any command running in the runner pane
-map rs :InterruptVimTmuxRunner
+map <leader>rs :InterruptVimTmuxRunner
 " Height of tmux pane
 let g:VimuxHeight ="40"
-" }}}
 " }}}
 " }}}
 
