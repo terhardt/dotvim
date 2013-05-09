@@ -38,10 +38,6 @@
 	path = bundle/vim-powerline
 	url = https://github.com/Lokaltog/vim-powerline/
     ignore = dirty
-[submodule "bundle/UltiSnips"]
-	path = bundle/UltiSnips
-	url = http://github.com/vim-scripts/UltiSnips/
-    ignore = dirty
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = http://github.com/ervandew/supertab/
