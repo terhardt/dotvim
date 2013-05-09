@@ -153,7 +153,7 @@ vnoremap <space> za
 " Ultisnips{{{
 let g:UltiSnipsUsePythonVersion = 2
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsListSnippets="<c-tab>"
+" let g:UltiSnipsListSnippets="<c-tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 " }}}
@@ -193,30 +193,29 @@ let g:crtlp_mruf_relative = 1
 " }}}
 "
 " python-mode {{{
+let g:pymode_doc = 0
 let g:pymode_lint=0
+let g:pymode_folding=1
+let g:pymode_rope=0
 let g:pymode_syntax=1
 let g:pymode_syntax_builtin_objs=1
 let g:pymode_syntax_builtin_funcs=1
-let g:pymode_folding=1
-let g:pymode_rope=0
-let g:pymode_rope_vim_completion=1
-let g:pymode_rope_extended_complete=0
-let g:pymode_auto_project=0
-let g:pymode_lint_ignore = "E501,E221"
+" }}}
+"
+" jedi {{{
+let g:jedi#popup_on_dot = 0
+let g:jedi#auto_vim_configuration = 0
+let g:jedi#popup_select_first = 1
+let g:jedi#show_function_definition = "0"
+let g:jedi#pydoc = "K"
 " }}}
 "
 "syntastic {{{
 let g:syntastic_python_checkers=["flake8"]
 " let g:syntastic_python_flake8_post_args='-d W0142' 
 "}}}
-
-" jedi {{{
-let g:jedi#popup_on_dot = 0
-let g:jedi#popup_select_first = 1
-let g:jedi#show_function_definition = "0"
-" }}}
 "
-" tagbar {{
+" tagbar {{{
 let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
 let g:tagbar_width = 20
 let g:tagbar_compact = 0
@@ -237,6 +236,7 @@ let g:tagbar_type_tex = {
         \ }
 "}}}
 " }}}
+"}}}
 "
 " vimux {{{
 " Prompt for a command to run
