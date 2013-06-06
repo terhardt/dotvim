@@ -11,3 +11,24 @@ snippet align "align environemt" !b
     $1
 \end{align}
 endsnippet
+
+snippet figure "Figure environbent" !
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{$1}
+    \caption{$2}
+    \label{fig:$3}
+\end{figure}
+endsnippet
+
+snippet SI "Number with SI unit" !
+\SI{$1}{$2}$3
+endsnippet
+
+snippet ct "Text citation" !
+\citet{$1}$2
+endsnippet
+
+snippet cp "Paranthesis citation" !
+\citep{$1}$2
+endsnippet

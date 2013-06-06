@@ -10,6 +10,7 @@ call pathogen#infect()
 call pathogen#helptags()
 filetype plugin indent on
 set nocompatible " be improved
+" set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 " }}}
 
 " Basics -----------------------------------------------------------------{{{
@@ -29,7 +30,9 @@ set visualbell                 " don't beep
 set noerrorbells               " don't beep
 set modeline
 set title                      " set terminals title
-
+set notimeout
+set ttimeout
+set timeoutlen=50
 
 " vimrc editing ----------------------------------------------------------{{{
 " quickly edit the vimrc file
@@ -119,6 +122,7 @@ nmap <leader><space> :noh<cr> " clear search string
 " toggle invisible characters
 nmap <silent><leader>i :set list!<CR>
 " text wrapping
+nmap <silent><leader>nw :set nowrap<CR>
 nmap <silent><leader>w :set wrap<CR>
 " Reformating
 nnoremap Q gqap
@@ -173,6 +177,15 @@ let g:SuperTabMappingTabLiteral="<c-tab>"
 set laststatus=2
 " set t_Co=256
 let g:Powerline_symbols="compatible"
+let g:Powerline_mode_n  = ' N '
+let g:Powerline_mode_i  = ' I '
+let g:Powerline_mode_R  = ' R '
+let g:Powerline_mode_v  = ' V '
+let g:Powerline_mode_V  = 'V-L'
+let g:Powerline_mode_cv = 'V-B'
+let g:Powerline_mode_s  = ' S '
+let g:Powerline_mode_S  = 'S-L'
+let g:Powerline_mode_sc = 'S-B'
 " }}}
 "
 " Latex-Box {{{
@@ -208,11 +221,16 @@ let g:jedi#auto_vim_configuration = 0
 let g:jedi#popup_select_first = 1
 let g:jedi#show_function_definition = "0"
 let g:jedi#pydoc = "K"
+let g:jedi#rename_command = "<leader>rr"
 " }}}
 "
 "syntastic {{{
 let g:syntastic_python_checkers=["flake8"]
-" let g:syntastic_python_flake8_post_args='-d W0142' 
+let g:syntastic_python_flake8_post_args='--ignore=E221'
+let g:syntastic_enable_sings=0
+let g:syntastic_auto_loc_list=1
+let g:syntastic_mode_map={'mode' : 'active',
+                         \ 'passive_filetypes':['tex']}
 "}}}
 "
 " tagbar {{{
