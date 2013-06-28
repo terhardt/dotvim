@@ -270,6 +270,10 @@ map <leader>rs :InterruptVimTmuxRunner
 " Height of tmux pane
 let g:VimuxHeight ="40"
 " }}}
+" pandoc {{{
+" Point pandoc to global references file to enable reference completion
+let g:pandoc_bibfliles = ['/Users/terhardt/Literature/references.bib']
+" }}}
 " }}}
 
 " GUI Options {{{
