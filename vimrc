@@ -30,10 +30,10 @@ set visualbell                 " don't beep
 set noerrorbells               " don't beep
 set modeline
 set title                      " set terminals title
-set notimeout
 set ttimeout
-set timeoutlen=50
+set timeoutlen=100
 
+set clipboard^=unnamed            " hook up vim clipboad to system clipboad
 " vimrc editing ----------------------------------------------------------{{{
 " quickly edit the vimrc file
 nmap <silent> <leader>ve :e $MYVIMRC<CR>
@@ -282,7 +282,6 @@ let g:pandoc_bibfliles = ['/Users/terhardt/Literature/references.bib']
 if has('gui_running')
     set guioptions=aAce              " disable tool bar in macvim
     set guifont="Source Code Pro":12 " set guifont to Inconsolata 11
-    set clipboard=unnamed            " hook up vim clipboad to system clipboad
 endif
 " }}}
 
