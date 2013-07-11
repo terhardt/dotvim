@@ -54,10 +54,6 @@
 	path = bundle/numbers.vim
     url = https://github.com/myusuf3/numbers.vim.git
     ignore = dirty
-[submodule "bundle/vimoutliner"]
-	path = bundle/vimoutliner
-    url = git://github.com/vimoutliner/vimoutliner.git
-    ingore = dirty
 [submodule "bundle/python-mode"]
 	path = bundle/python-mode
     url = git://github.com/klen/python-mode.git
@@ -113,4 +109,8 @@
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = https://github.com/bling/vim-airline.git
+    ignore = dirty
+[submodule "bundle/vimoutliner"]
+	path = bundle/vimoutliner
+    url = https://github.com/vimoutliner/vimoutliner.git
     ignore = dirty
