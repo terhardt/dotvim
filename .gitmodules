@@ -110,3 +110,7 @@
 	path = bundle/vim-haml
 	url = https://github.com/tpope/vim-haml.git
     ignore = dirty
+[submodule "bundle/vim-airline"]
+	path = bundle/vim-airline
+	url = https://github.com/bling/vim-airline.git
+    ignore = dirty

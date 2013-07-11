@@ -174,18 +174,33 @@ let g:SuperTabMappingTabLiteral="<c-tab>"
 " }}}
 "
 " PowerLine {{{
-set laststatus=2
+" set laststatus=2
 " set t_Co=256
-let g:Powerline_symbols="compatible"
-let g:Powerline_mode_n  = ' N '
-let g:Powerline_mode_i  = ' I '
-let g:Powerline_mode_R  = ' R '
-let g:Powerline_mode_v  = ' V '
-let g:Powerline_mode_V  = 'V-L'
-let g:Powerline_mode_cv = 'V-B'
-let g:Powerline_mode_s  = ' S '
-let g:Powerline_mode_S  = 'S-L'
-let g:Powerline_mode_sc = 'S-B'
+" let g:Powerline_symbols="compatible"
+" let g:Powerline_mode_n  = ' N '
+" let g:Powerline_mode_i  = ' I '
+" let g:Powerline_mode_R  = ' R '
+" let g:Powerline_mode_v  = ' V '
+" let g:Powerline_mode_V  = 'V-L'
+" let g:Powerline_mode_cv = 'V-B'
+" let g:Powerline_mode_s  = ' S '
+" let g:Powerline_mode_S  = 'S-L'
+" let g:Powerline_mode_sc = 'S-B'
+" }}}
+"
+" airline {{{
+set laststatus=2
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+let g:airline_theme='dark'
+let g:airline_mode_map={ 
+            \"n"      : ' N ',
+            \"i"      : ' I ',
+            \"R"      : ' R ',
+            \"v"      : ' V ',
+            \"V"      : 'V-L',
+            \"\<C-V>" : 'V-C',
+            \"c"      : 'CMD'}
 " }}}
 "
 " Latex-Box {{{
@@ -231,6 +246,8 @@ let g:syntastic_enable_sings=0
 let g:syntastic_auto_loc_list=1
 let g:syntastic_mode_map={'mode' : 'active',
                          \ 'passive_filetypes':['tex']}
+" close quick list with C-q
+nnoremap <silent> <C-q> :lclose<CR>:bdelete<CR>
 "}}}
 "
 " tagbar {{{
@@ -270,6 +287,7 @@ map <leader>rs :InterruptVimTmuxRunner
 " Height of tmux pane
 let g:VimuxHeight ="40"
 " }}}
+"
 " pandoc {{{
 " Point pandoc to global references file to enable reference completion
 let g:pandoc_bibfliles = ['/Users/terhardt/Literature/references.bib']
