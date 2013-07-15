@@ -30,15 +30,15 @@ set visualbell                 " don't beep
 set noerrorbells               " don't beep
 set modeline
 set title                      " set terminals title
-set ttimeout
+set ttimeoutlen=100
 set timeoutlen=100
 
 set clipboard^=unnamed            " hook up vim clipboad to system clipboad
 " vimrc editing ----------------------------------------------------------{{{
 " quickly edit the vimrc file
-nmap <silent> <leader>ve :e $MYVIMRC<CR>
+nnoremap <silent> <leader>ve :e $MYVIMRC<CR>
 " quickly source the vimrc file
-nmap <silent> <leader>vs :so $MYVIMRC<CR>
+nnoremap <silent> <leader>vs :so $MYVIMRC<CR>
 " }}}
 
 " movement ---------------------------------------------------------------{{{
@@ -113,7 +113,7 @@ set gdefault                  " default to global substitution
 set incsearch                 " incremental search
 set showmatch                 " show matches
 set hlsearch                  " highlight results
-nmap <leader><space> :noh<cr> " clear search string
+nnoremap <leader><space> :noh<cr> " clear search string
 " }}}
 
 " }}}
