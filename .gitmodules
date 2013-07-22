@@ -114,3 +114,7 @@
 	path = bundle/vimoutliner
     url = https://github.com/vimoutliner/vimoutliner.git
     ignore = dirty
+[submodule "bundle/vim-ledger"]
+	path = bundle/vim-ledger
+	url = https://github.com/ledger/vim-ledger.git
+    ignore = dirty
