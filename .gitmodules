@@ -118,3 +118,8 @@
 	path = bundle/vim-ledger
 	url = https://github.com/ledger/vim-ledger.git
     ignore = dirty
+[submodule "bundle/tslime"]
+	path = bundle/tslime
+	url = https://github.com/jgdavey/tslime.vim.git
+	branch = master
+    ignore = dirty

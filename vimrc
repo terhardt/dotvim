@@ -278,6 +278,12 @@ let g:tagbar_type_tex = {
 let g:VimuxHeight ="40"
 " }}}
 "
+" tslime {{{
+vmap <C-c><C-c> <Plug>SendSelectionToTmux
+nmap <C-c><C-c> <Plug>NormalModeSendToTmux
+nmap <C-c>r <Plug>SetTmuxVars
+" }}}
+"
 " pandoc {{{
 " Point pandoc to global references file to enable reference completion
 let g:pandoc_bibfliles = ['/Users/terhardt/Literature/references.bib']
