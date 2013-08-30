@@ -30,8 +30,8 @@ set visualbell                 " don't beep
 set noerrorbells               " don't beep
 set modeline
 set title                      " set terminals title
-set ttimeoutlen=500
-set timeoutlen=500
+set ttimeoutlen=1000
+set timeoutlen=1000
 
 set clipboard^=unnamed            " hook up vim clipboad to system clipboad
 " vimrc editing ----------------------------------------------------------{{{
@@ -275,6 +275,13 @@ let g:tagbar_type_tex = {
 "
 " vimux {{{
 " Height of tmux pane
+" prompt for command
+map <leader>vp :VimuxPromptCommand<CR>
+" run the last command
+map <leader>vr :VimuxRunLastCommand<CR>
+" run current line in tmux pane
+map <leader>vl :call VimuxRunCommand(getline('.'))<CR>
+" set height of vmux pane
 let g:VimuxHeight ="40"
 " }}}
 "
@@ -288,6 +295,11 @@ nmap <C-c>r <Plug>SetTmuxVars
 " Point pandoc to global references file to enable reference completion
 let g:pandoc_bibfliles = ['/Users/terhardt/Literature/references.bib']
 " }}}
+
+" Vim-R-plugin
+let vimrplugin_notmuxconf = 1
+let vimrplugin_screenplugin=0
+let fimrplugin_applescript = 0
 " }}}
 
 " GUI Options {{{
