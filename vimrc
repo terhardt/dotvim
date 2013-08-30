@@ -30,8 +30,8 @@ set visualbell                 " don't beep
 set noerrorbells               " don't beep
 set modeline
 set title                      " set terminals title
-set ttimeoutlen=100
-set timeoutlen=100
+set ttimeoutlen=500
+set timeoutlen=500
 
 set clipboard^=unnamed            " hook up vim clipboad to system clipboad
 " vimrc editing ----------------------------------------------------------{{{
@@ -91,7 +91,7 @@ let maplocalleader="\\"
 " If the terminal has enough colours set color scheme
 if &t_Co >= 256 || has("gui_running")
     colorscheme solarized           " set to solarized
-    set background=dark             " dark background as default
+    set background=light            " light background as default
     call togglebg#map("<S-F5>")     " switch between dark / light on <S-F5>
 endif
 " If the terminal has any colors enamble syntax highlighting
@@ -274,16 +274,6 @@ let g:tagbar_type_tex = {
 "}}}
 "
 " vimux {{{
-" Prompt for a command to run
-map <leader>rp :PromptVimTmuxCommand
-" Run last command executed by RunVimTmuxCommand
-map <leader>rl :RunLastVimTmuxCommand
-" Inspect runner pane
-map <leader>ri :InspectVimTmuxRunner
-" Close all other tmux panes in current window
-map <leader>rx :CloseVimTmuxPanes
-" Interrupt any command running in the runner pane
-map <leader>rs :InterruptVimTmuxRunner
 " Height of tmux pane
 let g:VimuxHeight ="40"
 " }}}
