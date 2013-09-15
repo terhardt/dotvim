@@ -193,7 +193,7 @@ set laststatus=2
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline_theme='dark'
-let g:airline_mode_map={ 
+let g:airline_mode_map={
             \"n"      : ' N ',
             \"i"      : ' I ',
             \"R"      : ' R ',
@@ -234,8 +234,8 @@ let g:pymode_syntax_builtin_funcs=1
 let g:jedi#popup_on_dot = 0
 let g:jedi#auto_vim_configuration = 0
 let g:jedi#popup_select_first = 1
-let g:jedi#show_function_definition = "0"
-let g:jedi#pydoc = "K"
+let g:jedi#show_call_signatures= "0"
+let g:jedi#documentation_command = "K"
 let g:jedi#rename_command = "<leader>rr"
 " }}}
 "
@@ -293,13 +293,15 @@ nmap <C-c>r <Plug>SetTmuxVars
 "
 " pandoc {{{
 " Point pandoc to global references file to enable reference completion
-let g:pandoc_bibfliles = ['/Users/terhardt/Literature/references.bib']
+let g:pandoc_bibfiles = ['/Users/terhardt/Literature/references.bib']
 " }}}
 
-" Vim-R-plugin
+" Vim-R-plugin {{{
 let vimrplugin_notmuxconf = 1
 let vimrplugin_screenplugin=0
-let fimrplugin_applescript = 0
+let vimrplugin_applescript = 0
+let vimrplugin_assign = 0
+" }}}
 " }}}
 
 " GUI Options {{{
@@ -313,5 +315,5 @@ endif
 
 " Autocommands {{{
 " save if focus is lost
-autocmd FocusLost * silent! wa     
+" autocmd FocusLost * silent! wa
 " }}}
