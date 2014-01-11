@@ -2,15 +2,45 @@
 " Tobias Erhardt 2013-04-06
 
 " Preamble ---------------------------------------------------------------{{{
-" Load Pathogen and set noncompatible option
+" Load Vundle and set noncompatible option
 
+set nocompatible " be iMproved
 filetype off
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-call pathogen#helptags()
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+" }}}
+
+" Bundles -----------------------------------------------------------------{{{
+" required as vundle manages itself
+Bundle 'gmarik/vundle'
+" All other Bundles
+Bundle 'LaTeX-Box-Team/LaTeX-Box'
+Bundle 'SirVer/ultisnips'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'benmills/vimux'
+Bundle 'bling/vim-airline'
+Bundle 'davidhalter/jedi-vim'
+Bundle 'ervandew/supertab'
+Bundle 'kien/ctrlp.vim'
+Bundle 'klen/python-mode'
+Bundle 'ledger/vim-ledger'
+Bundle 'majutsushi/tagbar'
+Bundle 'myusuf3/numbers.vim'
+Bundle 'rking/ag.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-surround'
+Bundle 'vim-scripts/The-NERD-tree'
+Bundle 'vim-scripts/Vim-R-plugin'
+Bundle 'vim-pandoc/vim-pandoc'
+Bundle 'mattn/zencoding-vim'
+Bundle 'vim-scripts/Jinja'
+Bundle 'tpope/vim-haml'
+
 filetype plugin indent on
-set nocompatible " be improved
-" set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 " }}}
 
 " Basics -----------------------------------------------------------------{{{
@@ -247,6 +277,7 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_mode_map={'mode' : 'active',
                          \ 'passive_filetypes':['tex']}
 " close quick list with C-q
+nnoremap <leader>l SyntasticCheck<CR>
 nnoremap <silent> <C-q> :lclose<CR>:bdelete<CR>
 "}}}
 "
