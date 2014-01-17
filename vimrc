@@ -39,6 +39,7 @@ Bundle 'vim-pandoc/vim-pandoc'
 Bundle 'mattn/zencoding-vim'
 Bundle 'vim-scripts/Jinja'
 Bundle 'tpope/vim-haml'
+Bundle 'airblade/vim-gitgutter'
 
 filetype plugin indent on
 " }}}
@@ -53,7 +54,7 @@ set backspace=indent,eol,start " backspace over everything
 set autoindent                 " enable auto indentation
 set smartindent                " automatic indentation
 set showcmd                    " show command in status line
-set autoread                   " auto reload changed files
+set autoread                   " auto reload changed iles
 set autowriteall               " auto write on buffer change
 set listchars=tab:▸\ ,eol:¬    " characters for invisibles
 set visualbell                 " don't beep
